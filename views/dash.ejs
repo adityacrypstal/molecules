@@ -1,0 +1,107 @@
+<html>
+    <style>
+        .btn{
+            font-size:10px;
+            margin:0;
+        }
+    </style>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Admin</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/admin">Products </span></a>
+                    <a class="nav-item nav-link" href="/admin/project">Projects</a>
+                  
+                  </div>
+                </div>
+              </nav>
+              <br>
+              <% include ./partials/messages %>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin-left:20px;">
+                    Add Product
+                  </button>
+                  <br>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Add blog</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                <form method="POST" action= "/admin/addProduct" id="productform" enctype="multipart/form-data">
+                                  <% include ./partials/messages %>
+                                        <div class="form-group row">
+                                          <label for="staticEmail" class="col-sm-2 col-form-label">Title</label>
+                                          <div class="col-sm-10">
+                                            <input type="text"  class="form-control" id="staticEmail" name="title" placeholder="Enter Title" required>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label for="inputPassword" class="col-sm-2 col-form-label">Type</label>
+                                          <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputPassword" name="type" placeholder="Enter Type" required>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                                <label for="inputPassword" class="col-sm-2 col-form-label">Capacity</label>
+                                                <div class="col-sm-10">
+                                                  <input type="text" class="form-control" id="inputPassword" name="capacity" placeholder="Enter Capacity" required>
+                                                </div>
+                                         </div>
+                                         <div class="form-group row">
+                                                <label for="inputPassword" class="col-sm-2 col-form-label">Tank</label>
+                                                <div class="col-sm-10">
+                                                  <input type="text" class="form-control" id="inputPassword" name="tank" placeholder="Enter Tank" required>
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Select Image</label>
+                                                    <input type="file" class="form-control-file" id="image1" name="image1" required>
+                                                  </div>
+                                      </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" onclick='document.getElementById("productform").submit()'>Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+        <div class="container-fluid">
+                <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Capacity</th>
+                            <th scope="col">Tank</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <%product.forEach((data, index)=>{%>
+                             <tr>
+                            <th scope="row"><%=index+1%></th>
+                            <td><%=data.title%></td>
+                            <td><%=data.type%></td>
+                            <td><%=data.capacity%></td>
+                            <td><%=data.tank%></td>
+                            <td>
+                                <a href="/admin/deleteProduct/<%=data._id%>"><button type="button" class="btn btn-danger btn-sm">Delete</button></a>
+                                <!-- <button type="button" class="btn btn-info btn-sm">Edit</button> -->
+                            </td>
+                          </tr>
+                          <%})%>
+                        </tbody>
+                      </table>
+        </div>
+</html>

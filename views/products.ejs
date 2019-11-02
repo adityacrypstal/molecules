@@ -1,0 +1,285 @@
+
+      <nav class="navbar navbar-expand-lg navbar-dark  sticky-top  circle" style="background-color:rgb(53, 125, 219)">
+          <a class="navbar-brand" href="#">Molecule Enviro Care</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/products">Projects</a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="/contact">Contact</a>
+                  </li>
+
+             
+          </div>
+        </nav>
+    
+    <section id="header">
+
+    </section>
+    <div id="products">
+        <div class="container">
+            <br>
+            <br>
+            <div class="row">
+                <h2>Products</h2>
+                
+            </div>
+            <br>
+                 
+                 <div class="row">
+                   <%products.forEach((product)=>{%>
+                        <div class="col-md-4" style="margin-bottom:20px;">
+                                <div class="card wow flipInY" style="width: 18rem;">
+                                        <img src='/uploads/<%=product.image1%>' class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                                <h5 class="card-title"><%=product.title%></h5>
+                                                <p class="card-text"><b>Type:</b> <%=product.type%><br><br><b>Model:</b> <%=product.capacity%><br><br><b>Capacity:</b> <%=product.capacity%><br><br><b>Tank:</b> <%=product.tank%><br></p>
+                                                <a href="#" class="btn btn-primary">Know More</a>
+                                              </div>
+                                      </div>
+                        </div>
+                        <%});%>
+                        <!-- <div class="col-md-4">
+                                <div class="card wow flipInY" style="width: 18rem;">
+                                        <img src="assets/img/products/2.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                                <h5 class="card-title">RO With UV (WO Pre Treatment)</h5>
+                                                <p class="card-text"><b>Type:</b> Skid mounted with panel board<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 1000 LPH<br><br><b>Module:</b> 40 X 40<br></p>
+                                                <a href="#" class="btn btn-primary">Know More</a>
+                                              </div>
+                                      </div>
+                        </div>
+                        <div class="col-md-4">
+                                <div class="card wow flipInY" style="width: 18rem;">
+                                        <img src="assets/img/products/3.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                                <h5 class="card-title">RO  with UV with pre-treatment and auto backwash facility</h5>
+                                                <p class="card-text"><b>Type:</b> Skid mounted with panel Board<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 1000 LPH<br><br><b>Module:</b> 40 X 40 <br><br></p>
+                                                <a href="#" class="btn btn-primary">Know More</a>
+                                              </div>
+                                      </div>
+                         </div> -->
+            </div>
+            <!-- <br>
+            <div class="row">
+                    <div class="col-md-4">
+                            <div class="card wow flipInY" style="width: 18rem;">
+                                    <img src="assets/img/products/4.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                            <h5 class="card-title">RO  Plant with panel board and skid made of SS 304</h5>
+                                            <p class="card-text"><b>Type:</b> Skid mounted with panel Board <br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 3000 LPH<br><br><b>Module:</b> 80 X 40<br><br></p>
+                                            <a href="#" class="btn btn-primary">Know More</a>
+                                          </div>
+                                  </div>
+                    </div>
+                    <div class="col-md-4">
+                            <div class="card wow flipInY" style="width: 18rem;">
+                                    <img src="assets/img/products/5.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                            <h5 class="card-title">RO  Plant with panel board and skid made of SS 304</h5>
+                                            <p class="card-text"><b>Type:</b> Skid mounted with panel 
+                                                Board<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 5000 LPH<br><br><b>Module:</b> 60 X 60 <br><br></p>
+                                            <a href="#" class="btn btn-primary">Know More</a>
+                                          </div>
+                                  </div>
+                    </div>
+                    <div class="col-md-4">
+                            <div class="card wow flipInY" style="width: 18rem;">
+                                    <img src="assets/img/products/6.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                            <h5 class="card-title">RO  Plant with panel board and skid made of SS 304</h5>
+                                            <p class="card-text"><b>Type:</b>Skid mounted with panel<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 9000 LPH <br><br><b>Module:</b> 80 X 40<br><br></p>
+                                            <a href="#" class="btn btn-primary">Know More</a>
+                                          </div>
+                                  </div>
+                     </div>
+        </div>
+        <br>
+        <div class="row">
+                <div class="col-md-4">
+                        <div class="card wow flipInY" style="width: 18rem;">
+                                <img src="assets/img/products/7.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                        <h5 class="card-title">Ultra Filter with UV</h5>
+                                        <p class="card-text"><b>Type:</b>Skid mounted with panel Board<br><br><b>Model:</b> Drinking Water<br><br><b>Capacity:</b> 100LPH<br><br><b>Module:</b> 40 X 20<br><br><b>UV:</b> 30 inch 38 watts MOC SS304 with quarts jacket balister and panel<br><br></p>
+                                        <a href="#" class="btn btn-primary">Know More</a>
+                                      </div>
+                              </div>
+                </div>
+                <div class="col-md-4">
+                        <div class="card wow flipInY" style="width: 18rem;">
+                                <img src="assets/img/products/8.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                        <h5 class="card-title">Ultra Filtration Plant</h5>
+                                        <p class="card-text"><b>Type:</b> Skid mounted with panel 
+                                            Board<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 6000 LPH  <br><br><b>Module:</b> 60 X 60<br><br></p>
+                                        <a href="#" class="btn btn-primary">Know More</a>
+                                      </div>
+                              </div>
+                </div>
+                <div class="col-md-4">
+                        <div class="card wow flipInY" style="width: 18rem;">
+                                <img src="assets/img/products/9.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                        <h5 class="card-title">Ultra Filtration Plant</h5>
+                                        <p class="card-text"><b>Type:</b> Skid mounted with panel<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 25000 LPH<br><br><b>Module:</b> 80 X 40 <br><br></p>
+                                        <a href="#" class="btn btn-primary">Know More</a>
+                                      </div>
+                              </div>
+                 </div>
+    </div>
+    <br>
+    <div class="row">
+            <div class="col-md-4">
+                    <div class="card wow flipInY" style="width: 18rem;">
+                            <img src="assets/img/products/10.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                    <h5 class="card-title">Nano Filtration Plant</h5>
+                                    <p class="card-text"><b>Type:</b>Skid mounted with panel Board<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 5000 LPH <br><br><b>Module: </b>60 X 40                                        <br><br></p>
+                                    <a href="#" class="btn btn-primary">Know More</a>
+                                  </div>
+                          </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="card wow flipInY" style="width: 18rem;">
+                            <img src="assets/img/products/11.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                    <h5 class="card-title">Nano Filtration Plant made of SS skid and housing</h5>
+                                    <p class="card-text"><b>Type:</b> Skid mounted with panel Board <br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 25000 LPH<br><br><b>Module:</b> 60 X 40<br><br></p>
+                                    <a href="#" class="btn btn-primary">Know More</a>
+                                  </div>
+                          </div>
+            </div> -->
+            <!-- <div class="col-md-4">
+                    <div class="card wow flipInY" style="width: 18rem;">
+                            <img src="assets/img/products/12.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                    <h5 class="card-title">Nano Filtration Plant made of SS skid and housing</h5>
+                                    <p class="card-text"><b>Type:</b> Skid mounted with panel <br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 500 LPH <br><br><b>Module:</b> 40 X 40<br><br></p>
+                                    <a href="#" class="btn btn-primary">Know More</a>
+                                  </div>
+                          </div>
+             </div>
+        </div> -->
+<br>
+        </div>
+      </div>
+    <section id="footer">
+      <!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-5 mx-auto">
+  
+          <!-- Content -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Molecule Enviro Care</h5>
+          <p class="footer-abt">Founded in 1995, MEC is an environmental Engineering Company with the specialization in water and Waste Water management (STP, ETP), particularly for healthcare, hospitality, education, commercial, residential, and industrial pollution control. Headquarter in Kayamkulam on the major towns in between Cochin and Trivandrum of Kerala.</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto">
+  
+            <!-- Content -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact Us</h5>
+            <p><i class="fa fa-map-marker fa-1x"></i> Sreepadam,Opp.S.B.I.,Puthiyidom,Kayamkulam, Alappuzha, Kerala 690502</p>
+            <p><i class="fa fa-phone fa-1x"></i> +91 9567682232</p>
+    
+          </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+        <hr class="clearfix w-100 d-md-none">
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Go To</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">About</a>
+            </li>
+            <li>
+              <a href="#!">Projects</a>
+            </li>
+            
+            <li>
+              <a href="#!">Contact</a>
+            </li>
+            <li>
+              <a href="#!">FAQ</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <hr>
+  
+  
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1">
+          <i class="fa fa-facebook fa-2x"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1">
+          <i class="fa fa-twitter fa-2x"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gplus mx-1">
+          <i class="fa fa-google-plus fa-2x"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1">
+          <i class="fa fa-linkedin fa-2x"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1">
+          <i class="fa fa-dribbble fa-2x"> </i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="https://adityav.in"> Molecule Enviro Care</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+    </section>
+  
