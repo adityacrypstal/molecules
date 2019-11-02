@@ -156,8 +156,7 @@ router.get('/deleteProject/:id',(req, res)=>{
 
 router.post("/sentMail",(req, res)=>{
   console.log(req.body);
-  sgMail.setApiKey('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');
-  console.log(process.env.SENDGRID_API_KEY)
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
     to: 'adityavadityav@gmail.com',
     from: 'admin@molecule',
