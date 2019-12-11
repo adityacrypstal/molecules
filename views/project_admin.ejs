@@ -35,7 +35,7 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                                <form  method="POST" action= "/admin/addProject" id="projectform">
+                                <form  method="POST" action= "/admin/addProject" id="projectform" enctype="multipart/form-data">
                                         <div class="form-group row">
                                           <div class="col-sm-12">
                                             <input type="text"  class="form-control" id="staticEmail" placeholder="Enter Title" name="title">
@@ -88,7 +88,7 @@
                         <tbody>
                             <%project.forEach((data, index)=>{%>
                           <tr>
-                            <th scope="row"><%=index+1%></th>
+                            <td scope="row"><%=index+1%></td>
                             <td><%=data.title%></td>
                             <td>
                                 <a href="/admin/deleteProject/<%=data._id%>"><button type="button" class="btn btn-danger btn-sm">Delete</button></a>

@@ -110,25 +110,25 @@
     </section>
     <section id="scroll">
       <div class="owl-carousel container">
+          <%projects.forEach((project)=>{%>
         <div>
           <div class="card wow flipInY" style="width: 18rem;">
-            <img class="card-img-top" src="https://dummyimage.com/640x360/fff/aaa" alt="Card image cap" />
+            <img class="card-img-top" src="/uploads/<%=project.image1%>" alt="Card image cap" />
             <div class="card-body">
-              <h5 class="card-title">Project</h5>
-              <p class="card-text">
-                Some quick example text to build on the Project and make up
-                the bulk of the card's content.
+              <h5 class="card-title"><%=project.title%></h5>
+              <p class="card-text dots"><%=project.content.substring(0, 100)%>
               </p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
         </div>
-        <div>
+        <%});%>
+        <!-- <div>
             <div class="card wow flipInY" style="width: 18rem;">
               <img class="card-img-top" src="https://dummyimage.com/640x360/fff/aaa" alt="Card image cap" />
               <div class="card-body">
                 <h5 class="card-title">Project</h5>
-                <p class="card-text">
+                <p class="card-text dots">
                   Some quick example text to build on the Project and make up
                   the bulk of the card's content.
                 </p>
@@ -141,7 +141,7 @@
             <img class="card-img-top" src="https://dummyimage.com/640x360/fff/aaa" alt="Card image cap" />
             <div class="card-body">
               <h5 class="card-title">Project</h5>
-              <p class="card-text">
+              <p class="card-text dots">
                 Some quick example text to build on the Project and make up
                 the bulk of the card's content.
               </p>
@@ -154,7 +154,7 @@
             <img class="card-img-top" src="https://dummyimage.com/640x360/fff/aaa" alt="Card image cap" />
             <div class="card-body">
               <h5 class="card-title">Project</h5>
-              <p class="card-text">
+              <p class="card-text dots">
                 Some quick example text to build on the Project and make up
                 the bulk of the card's content.
               </p>
@@ -167,14 +167,14 @@
             <img class="card-img-top" src="https://dummyimage.com/640x360/fff/aaa" alt="Card image cap" />
             <div class="card-body">
               <h5 class="card-title">Project</h5>
-              <p class="card-text">
+              <p class="card-text dots ">
                 Some quick example text to build on the Project and make up
                 the bulk of the card's content.
               </p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
-        </div>
+        </div> -->
         
     </section>
     <section id="footer">

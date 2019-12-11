@@ -126,14 +126,17 @@ router.get('/deleteProduct/:id',(req, res)=>{
 })
 
 // Project
-var cpUpload = upload.fields([{ name: 'image1', maxCount: 1 }, { name: 'image2', maxCount: 1 }, { name: 'image23', maxCount: 1 }, { name: 'image4', maxCount: 1 }])
+var cpUpload =upload.fields([{ name: 'image1', maxCount: 1 }, { name: 'image2', maxCount: 1 }, { name: 'image3', maxCount: 1 }, { name: 'image4', maxCount: 1 }])
 router.post('/addProject', cpUpload, (req, res)=>{
   let errors = [];
-    const{title, content, image1, image2, image3, image4} = req.body;
+    const{title, content} = req.body;
+    const image1 = req.files['image1'] ? req.files['image1'][0].filename : null;
+    const image2 = req.files['image2'] ? req.files['image2'][0].filename : null;
+    const image3 = req.files['image3'] ? req.files['image3'][0].filename : null; 
+    const image4 = req.files['image4'] ? req.files['image4'][0].filename : null;
     if(!title || !content || !image1){
       errors.push({ msg: 'Please Fill All Data' });
       Project.find({}).then((data)=>{
-        console.log(data)
         res.render('project_admin',{project:data,errors});
       })
       
@@ -154,7 +157,7 @@ router.get('/deleteProject/:id',(req, res)=>{
   console.log(err))
 });
 
-router.post("/sentMail",(req, res)=>{
+router.post("/sentMail",async (req, res)=>{
   console.log(req.body);
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
@@ -163,8 +166,8 @@ router.post("/sentMail",(req, res)=>{
     subject: 'Someone is asking about your product',
     text: `Name:${req.body.name}, email:${req.body.email}, Phone: ${req.body.phone}, Address:${req.body.address}, Message:${req.body.text}`,
   };
-  sgMail.send(msg).catch((err)=>console.log(err));
-  res.redirect('/contact')
+  await sgMail.send(msg).catch((err)=>console.log(err));
+  await res.redirect('/contact')
 })
 // Login
 router.post('/login', (req, res, next) => {
