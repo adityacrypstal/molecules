@@ -118,7 +118,7 @@
               <h5 class="card-title"><%=project.title%></h5>
               <p class="card-text dots"><%=project.content.substring(0, 100)%>
               </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <p  class="btn btn-primary" onclick='openfile("<%=project._id%>")'>Go somewhere</p>
             </div>
           </div>
         </div>
@@ -288,8 +288,67 @@
       <a href="https://adityav.in"> Molecules Enviro Care</a>
     </div>
     <!-- Copyright -->
-  
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div id="content" >
+          <div class="owl-carousel  project-image" id="some">
+            <div id="one">
+<!--              <img src="assets/img/about-infra.jpg" alt="">-->
+            </div>
+            <div id="two">
+<!--              <img src="assets/img/about-infra.jpg" alt="">-->
+            </div>
+            <div id="three">
+<!--              <img src="assets/img/about-infra.jpg" alt="">-->
+            </div>
+            <div id="four">
+<!--              <img src="assets/img/about-infra.jpg" alt="">-->
+            </div>
+          </div>
+          </div>
+          <div class="container" style="margin-top:30px;">
+            <h3 id="project-header" style="color:black"></h3>
+            <p id="project-content" style="color:black;font-size:15px;"></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   </footer>
   <!-- Footer -->
     </section>
-   
+      <script>
+        let data = <%- JSON.stringify(projects)%>;
+        console.log(data)
+        function  openfile(id) {
+          $('#theImg1').remove();$('#theImg2').remove();$('#theImg3').remove();$('#theImg4').remove();
+          console.log("got something")
+          console.log(id);
+          let selected = data.filter((data)=>data._id == id);
+          console.log(selected)
+          if(selected.length>0){
+            $('#exampleModal').modal("show")
+            $('#project-header').text(selected[0].title);
+            $('#project-content').text(selected[0].content);
+            if(selected[0].image1){
+             $('#one').prepend($('<img>',{id:'theImg1',src:'/uploads/'+selected[0].image1}))
+            }
+            if(selected[0].image2){
+              $('#two').prepend($('<img>',{id:'theImg2',src:'/uploads/'+selected[0].image2}))
+            }
+            if(selected[0].image3){
+              $('#three').prepend($('<img>',{id:'theImg3',src:'/uploads/'+selected[0].image3}))
+            }
+            if(selected[0].image4){
+             $('#four').prepend($('<img>',{id:'theImg4',src:'/uploads/'+selected[0].image4}))
+            }
+          }
+
+        }
+
+      </script>

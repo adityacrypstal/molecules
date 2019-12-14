@@ -80,6 +80,23 @@
           }
         });
       });
+      $(document).ready(function() {
+        $("#content .owl-carousel").owlCarousel({
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 2000,
+          animateIn: 'fadeInRight',
+          navigation:true,
+          items:1,
+          margin:30,
+          stagePadding:30,
+          smartSpeed:450,
+          dots:true,
+          pagination:false,
+          navigation:true
+
+        });
+      });
     </script>
     <script type="text/javascript">
       (function($) {          
