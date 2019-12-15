@@ -41,5 +41,7 @@ router.get("/testing", async (req, res) => {
     // return resolve;
   });
 });
-
+router.get('/sitemap.xml', function(req, res) {
+  res.sendFile('public/sitemap.xml');
+});
 module.exports = router;
