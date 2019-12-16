@@ -161,7 +161,7 @@ router.post("/sentMail",async (req, res)=>{
   console.log(req.body);
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
-    to: 'adityavadityav@gmail.com',
+    to: 'moleculesenvirocare@gmail.com',
     from: 'admin@molecule',
     subject: 'Someone is asking about your product',
     text: `Name:${req.body.name}, email:${req.body.email}, Phone: ${req.body.phone}, Address:${req.body.address}, Message:${req.body.text}`,
