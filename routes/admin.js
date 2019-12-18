@@ -6,7 +6,7 @@ var multer  = require('multer')
 const upload = multer({
 
   fileFilter(req, file, cb) {
-    if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
+    if (!file.originalname.match(/\.(jpg|jpeg|png|JPG)$/)) {
       req.fileValidationError = 'goes wrong on the mimetype';
       return cb(null, false, new Error('goes wrong on the mimetype'));
     }
