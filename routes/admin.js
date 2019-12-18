@@ -3,7 +3,18 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 var multer  = require('multer')
-var upload = multer({ dest: 'public/uploads/' });
+const upload = multer({
+
+  fileFilter(req, file, cb) {
+    if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
+      req.fileValidationError = 'goes wrong on the mimetype';
+      return cb(null, false, new Error('goes wrong on the mimetype'));
+    }
+
+
+    cb(undefined, true)
+  }
+});
 const sgMail = require('@sendgrid/mail');
 const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 // Load User model
@@ -100,7 +111,8 @@ router.post('/register', (req, res) => {
 router.post('/addProduct',upload.single('image1'),(req, res)=>{
   let errors = [];
     const{title, type, capacity, tank} = req.body;
-    const image1 = req.file.filename
+    console.log(req.files)
+    const image1 = req.files['image1'][0].buffer
     console.log(image1)
     if(!title || !type || !capacity || !tank || !image1){
       errors.push({ msg: 'Please Fill All Data' });
@@ -130,10 +142,11 @@ var cpUpload =upload.fields([{ name: 'image1', maxCount: 1 }, { name: 'image2', 
 router.post('/addProject', cpUpload, (req, res)=>{
   let errors = [];
     const{title, content} = req.body;
-    const image1 = req.files['image1'] ? req.files['image1'][0].filename : null;
-    const image2 = req.files['image2'] ? req.files['image2'][0].filename : null;
-    const image3 = req.files['image3'] ? req.files['image3'][0].filename : null; 
-    const image4 = req.files['image4'] ? req.files['image4'][0].filename : null;
+    console.log(req.files)
+    const image1 = req.files['image1'] ? req.files['image1'][0].buffer : null;
+    const image2 = req.files['image2'] ? req.files['image2'][0].buffer : null;
+    const image3 = req.files['image3'] ? req.files['image3'][0].buffer : null;
+    const image4 = req.files['image4'] ? req.files['image4'][0].buffer : null;
     if(!title || !content || !image1){
       errors.push({ msg: 'Please Fill All Data' });
       Project.find({}).then((data)=>{

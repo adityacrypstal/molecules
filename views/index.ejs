@@ -114,7 +114,7 @@
           <%projects.forEach((project)=>{%>
         <div>
           <div class="card wow flipInY" style="width: 18rem;">
-            <img class="card-img-top" src="/uploads/<%=project.image1%>" alt="Card image cap" />
+            <img class="card-img-top" src="data:image/png;base64,<%=project.image1.toString('base64')%>" alt="Card image cap" />
             <div class="card-body">
               <h5 class="card-title"><%=project.title%></h5>
               <p class="card-text dots"><%=project.content.substring(0, 100)%>
@@ -337,16 +337,21 @@
             $('#project-header').text(selected[0].title);
             $('#project-content').text(selected[0].content);
             if(selected[0].image1){
-             $('#one').prepend($('<img>',{id:'theImg1',src:'/uploads/'+selected[0].image1}))
+                let some = selected[0].image1.toString('base64');
+            }
+             $('#one').prepend($('<img>',{id:'theImg1',src:`data:image/png;base64,${some}`}))
             }
             if(selected[0].image2){
-              $('#two').prepend($('<img>',{id:'theImg2',src:'/uploads/'+selected[0].image2}))
+                let some2 = selected[0].image2.toString('base64');
+              $('#two').prepend($('<img>',{id:'theImg2',src:`data:image/png;base64,${some2}`}))
             }
             if(selected[0].image3){
-              $('#three').prepend($('<img>',{id:'theImg3',src:'/uploads/'+selected[0].image3}))
+                let some3 = selected[0].image3.toString('base64');
+              $('#three').prepend($('<img>',{id:'theImg3',src:`data:image/png;base64,${some3}`}))
             }
             if(selected[0].image4){
-             $('#four').prepend($('<img>',{id:'theImg4',src:'/uploads/'+selected[0].image4}))
+                let some4 = selected[0].image4.toString('base64');
+             $('#four').prepend($('<img>',{id:'theImg4',src:`data:image/png;base64,${some4}`))
             }
           }
 

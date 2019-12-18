@@ -10,19 +10,19 @@ const ProjectSchema = new mongoose.Schema({
     required: true
   },
   image1: {
-    type: String,
+    type: Buffer,
 
   },
   image2: {
-    type: String,
+    type: Buffer,
 
   },
   image3: {
-    type: String,
+    type: Buffer,
 
   },
   image4: {
-    type: String,
+    type: Buffer,
 
   }
 });

@@ -41,7 +41,7 @@
                    <%products.forEach((product)=>{%>
                         <div class="col-md-4" style="margin-bottom:20px;">
                                 <div class="card wow flipInY" style="width: 18rem;">
-                                        <img src='/uploads/<%=product.image1%>' class="card-img-top" alt="...">
+                                        <img src='data:image/png;base64,<%=product.image1.toString('base64')%>' class="card-img-top" alt="...">
                                         <div class="card-body">
                                                 <h5 class="card-title"><%=product.title%></h5>
                                                 <p class="card-text"><b>1:</b> <%=product.type%><br><br><b>2:</b> <%=product.capacity%><br><br><b>3:</b> <%=product.capacity%><br><br><b>4:</b> <%=product.tank%><br></p>
