@@ -111,8 +111,8 @@ router.post('/register', (req, res) => {
 router.post('/addProduct',upload.single('image1'),(req, res)=>{
   let errors = [];
     const{title, type, capacity, tank} = req.body;
-    console.log(req.files)
-    const image1 = req.files['image1'][0].buffer
+    console.log(req.file)
+    const image1 = req.file.buffer
     console.log(image1)
     if(!title || !type || !capacity || !tank || !image1){
       errors.push({ msg: 'Please Fill All Data' });
