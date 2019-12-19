@@ -14,8 +14,11 @@
                     <a class="nav-link" href="/about">About</a>
                   </li>
                   <li class="nav-item active">
-                      <a class="nav-link" href="/products">Projects</a>
+                      <a class="nav-link" href="/products">Products</a>
                   </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="/project">Projects</a>
+                </li>
                   <li class="nav-item ">
                       <a class="nav-link" href="/contact">Contact</a>
                   </li>
@@ -39,16 +42,32 @@
                  
                  <div class="row">
                    <%products.forEach((product)=>{%>
-                        <div class="col-md-4" style="margin-bottom:20px;">
-                                <div class="card wow flipInY" style="width: 18rem;">
-                                        <img src='data:image/png;base64,<%=product.image1.toString('base64')%>' class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                                <h5 class="card-title"><%=product.title%></h5>
-                                                <p class="card-text"><b>1:</b> <%=product.type%><br><br><b>2:</b> <%=product.capacity%><br><br><b>3:</b> <%=product.capacity%><br><br><b>4:</b> <%=product.tank%><br></p>
-                                                <a href="#" class="btn btn-primary">Know More</a>
-                                              </div>
-                                      </div>
-                        </div>
+<!--                        <div class="col-md-4" style="margin-bottom:20px;">-->
+<!--                                <div class="card wow flipInY" style="width: 18rem;">-->
+<!--                                        <img src='data:image/png;base64,<%=product.image1.toString('base64')%>' class="card-img-top" alt="...">-->
+<!--                                        <div class="card-body">-->
+<!--                                                <h5 class="card-title"><%=product.title%></h5>-->
+<!--                                                <p class="card-text"><b>1:</b> <%=product.type%><br><br><b>2:</b> <%=product.capacity%><br><br><b>3:</b> <%=product.capacity%><br><br><b>4:</b> <%=product.tank%><br></p>-->
+<!--                                                <a href="#" class="btn btn-primary">Know More</a>-->
+<!--                                              </div>-->
+<!--                                      </div>-->
+<!--                        </div>-->
+                     <div class="col-12 mt-3">
+                     <div class="card wow flipInX" style="width:100%">
+                         <div class="card-horizontal">
+                             <div class="img-square-wrapper">
+                                 <img src='data:image/png;base64,<%=product.image1.toString('base64')%>' class="card-img-top" alt="...">
+                             </div>
+                             <div class="card-body">
+                                 <h4 class="card-title"><%=product.title%></h4>
+                                 <p class="card-text"><b>1:</b> <%=product.type%><br><br><b>2:</b> <%=product.capacity%><br><br><b>3:</b> <%=product.capacity%><br><br><b>4:</b> <%=product.tank%><br></p>
+                             </div>
+                         </div>
+                         <div class="card-footer">
+                             <small class="text-muted">Last updated 3 mins ago</small>
+                         </div>
+                     </div>
+                 </div>
                         <%});%>
                         <!-- <div class="col-md-4">
                                 <div class="card wow flipInY" style="width: 18rem;">

@@ -19,7 +19,7 @@ const pdf2pic = new PDF2Pic({
 let errors = [];
 // Welcome Page
 router.get("/", (req, res) => {
-  Project.find({}).then(data => {
+  Project.find({}).limit(4).then(data => {
     console.log(data);
     res.render("index", { projects: data, errors: errors });
   });
@@ -29,6 +29,12 @@ router.get("/products", (req, res) => {
   Product.find({}).then(data => {
     console.log(data);
     res.render("products", { products: data });
+  });
+});
+router.get("/project", (req, res) => {
+  Project.find({}).then(data => {
+    console.log(data);
+    res.render("projects", { projects: data, errors: errors });
   });
 });
 router.get("/contact", (req, res) => res.render("contact"));

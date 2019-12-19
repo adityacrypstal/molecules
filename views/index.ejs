@@ -1,5 +1,5 @@
 
-      <nav class="navbar navbar-expand-lg navbar-dark transparent sticky-top circle">
+      <nav class="navbar navbar-expand-lg navbar-dark  sticky-top circle">
           <a class="navbar-brand" href="#">
               <img src="assets/img/logo.jpg" width="60" alt="" style="position:absolute"/></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,6 +17,9 @@
                   <li class="nav-item">
                       <a class="nav-link" href="/products">Projects</a>
                   </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/project">Projects</a>
+                    </li>
                   <li class="nav-item ">
                       <a class="nav-link" href="/contact">Contact</a>
                   </li>
@@ -24,7 +27,66 @@
              
           </div>
         </nav>
-    <div id="particles-js"></div>
+    <section style="font-size: 62.5%;"><div class="slider-container">
+            <div class="slider-control left inactive"></div>
+            <div class="slider-control right"></div>
+            <ul class="slider-pagi"></ul>
+            <div class="slider">
+                <div class="slide slide-0 active">
+                    <div class="slide__bg"></div>
+                    <div class="slide__content">
+                        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                            <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                        </svg>
+                        <div class="slide__text">
+                            <h2 class="slide__text-heading">Under Ground STP</h2>
+                            <p class="slide__text-desc">Underground Sewage Treatment Plant (STP) for Hotels, Restaurants. ... SD Enviro Engineers provide a broad spectrum of packaged sewage treatment systems to handle domestic and industrial sewage originating from industrial residences, giant commercial complexes, small and medium industries.</p>
+                            <a class="slide__text-link" href="/project">Project link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide-1 ">
+                    <div class="slide__bg"></div>
+                    <div class="slide__content">
+                        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                            <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                        </svg>
+                        <div class="slide__text">
+                            <h2 class="slide__text-heading">Effluent Treatment Plant</h2>
+                            <p class="slide__text-desc">Industrial wastewater treatment describes the processes used for treating wastewater that is produced by industries as an undesirable by-product. After treatment, the treated industrial wastewater may be reused or released to a sanitary sewer or to a surface water in the environment.</p>
+                            <a class="slide__text-link" href="/project">Project link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide-2">
+                    <div class="slide__bg"></div>
+                    <div class="slide__content">
+                        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                            <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                        </svg>
+                        <div class="slide__text">
+                            <h2 class="slide__text-heading">Sewage Treatment Plant</h2>
+                            <p class="slide__text-desc">Sewage treatment is the process of removing contaminants from municipal wastewater, containing mainly household sewage plus some industrial wastewater.</p>
+                            <a class="slide__text-link" href="/project">Project link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide-3">
+                    <div class="slide__bg"></div>
+                    <div class="slide__content">
+                        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                            <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                        </svg>
+                        <div class="slide__text">
+                            <h2 class="slide__text-heading">Water Purification</h2>
+                            <p class="slide__text-desc">Water purification is the process of removing undesirable chemicals, biological contaminants, suspended solids, and gases from water. The goal is to produce water fit for specific purposes.</p>
+                            <a class="slide__text-link" href="/project">Project link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="about">
       <div class="container">
         <div class="align-middle">
@@ -113,8 +175,8 @@
       <div class="owl-carousel container">
           <%projects.forEach((project)=>{%>
         <div>
-          <div class="card wow flipInY" style="width: 18rem;">
-            <img class="card-img-top" src="data:image/png;base64,<%=project.image1.toString('base64')%>" alt="Card image cap" />
+          <div class="card wow flipInY test" style="width: 18rem;">
+            <img class="card-img-top " src="data:image/png;base64,<%=project.image1.toString('base64')%>" alt="Card image cap" />
             <div class="card-body">
               <h5 class="card-title"><%=project.title%></h5>
               <p class="card-text dots"><%=project.content.substring(0, 100)%>
@@ -124,63 +186,11 @@
           </div>
         </div>
         <%});%>
-        <!-- <div>
-            <div class="card wow flipInY" style="width: 18rem;">
-              <img class="card-img-top" src="https://dummyimage.com/640x360/fff/aaa" alt="Card image cap" />
-              <div class="card-body">
-                <h5 class="card-title">Project</h5>
-                <p class="card-text dots">
-                  Some quick example text to build on the Project and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-        <div>
-          <div class="card wow flipInY" style="width: 18rem;">
-            <img class="card-img-top" src="https://dummyimage.com/640x360/fff/aaa" alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Project</h5>
-              <p class="card-text dots">
-                Some quick example text to build on the Project and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="card wow flipInY" style="width: 18rem;">
-            <img class="card-img-top" src="https://dummyimage.com/640x360/fff/aaa" alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Project</h5>
-              <p class="card-text dots">
-                Some quick example text to build on the Project and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="card wow flipInY" style="width: 18rem;">
-            <img class="card-img-top" src="https://dummyimage.com/640x360/fff/aaa" alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">Project</h5>
-              <p class="card-text dots ">
-                Some quick example text to build on the Project and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div> -->
-        
+
     </section>
     <section id="footer">
       <!-- Footer -->
-<footer class="page-footer font-small stylish-color-dark pt-4">
+<footer class="page-footer font-small stylish-color-dark pt-4 footer-index">
 
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
@@ -337,21 +347,16 @@
             $('#project-header').text(selected[0].title);
             $('#project-content').text(selected[0].content);
             if(selected[0].image1){
-                let some = selected[0].image1.toString('base64');
-            }
-             $('#one').prepend($('<img>',{id:'theImg1',src:`data:image/png;base64,${some}`}))
+                $('#one').prepend($('<img>',{id:'theImg1',src:`data:image/png;base64,${selected[0].image1.toString('base6s4')}`}))
             }
             if(selected[0].image2){
-                let some2 = selected[0].image2.toString('base64');
-              $('#two').prepend($('<img>',{id:'theImg2',src:`data:image/png;base64,${some2}`}))
+              $('#two').prepend($('<img>',{id:'theImg2',src:`data:image/png;base64,${ selected[0].image2.data.toString('base64')}`}))
             }
             if(selected[0].image3){
-                let some3 = selected[0].image3.toString('base64');
-              $('#three').prepend($('<img>',{id:'theImg3',src:`data:image/png;base64,${some3}`}))
+              $('#three').prepend($('<img>',{id:'theImg3',src:`data:image/png;base64,${selected[0].image3.data.toString('base64')}`}))
             }
             if(selected[0].image4){
-                let some4 = selected[0].image4.toString('base64');
-             $('#four').prepend($('<img>',{id:'theImg4',src:`data:image/png;base64,${some4}`))
+             $('#four').prepend($('<img>',{id:'theImg4',src:`data:image/png;base64,${selected[0].image4.data.toString('base64')}`}))
             }
           }
 
