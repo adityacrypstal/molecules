@@ -51,8 +51,9 @@ water treatment plant in kerala, sewage treatment in kerala, sewage, treatment, 
       <i class="fa fa-whatsapp my-float"></i>
     </a>
   </head>
-  <body>
-        <div><%- body %></div>
+  <body onload="myFunction()">
+      <div id="loader"></div>
+        <div id="myDiv"><%- body %></div>
   <!-- Footer -->
     <!-- scripts -->
     <script src="assets/js/particles.js"></script>
@@ -257,6 +258,14 @@ water treatment plant in kerala, sewage treatment in kerala, sewage, treatment, 
         });
 
       });
+      function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+      }
+
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
       </script>
   
   </body>

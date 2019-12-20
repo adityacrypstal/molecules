@@ -19,7 +19,7 @@ const pdf2pic = new PDF2Pic({
 let errors = [];
 // Welcome Page
 router.get("/", (req, res) => {
-  Project.find({}).limit(4).then(data => {
+  Project.find({}).limit(4).sort('-created').then(data => {
     console.log(data);
     res.render("index", { projects: data, errors: errors });
   });
