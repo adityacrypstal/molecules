@@ -315,6 +315,14 @@ div.card {
 .navbar{
   background-color:#008cd3;!important;}
 @media only screen and (max-width: 600px) {
+  .card-img-top{
+    height:auto;
+    width:100%!important;
+  }
+  .card-horizontal{
+    flex-direction: column !important;
+    display: flex !important;
+  }
   .navbar{
   background-color:#008cd3;!important;}
   .about-p{
