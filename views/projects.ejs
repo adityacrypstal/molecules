@@ -49,133 +49,13 @@
                         <h5 class="card-title"><%=product.title%></h5>
                         <p class="card-text dots"><%=product.content.substring(0, 100)%>
                             <br><br>
-                        <a href="#" class="btn btn-primary">Know More</a>
+                        <a href="#" class="btn btn-primary" onclick='openfile("<%=product._id%>")'>Know More</a>
                     </div>
                 </div>
             </div>
             <%});%>
-            <!-- <div class="col-md-4">
-                    <div class="card wow flipInY" style="width: 18rem;">
-                            <img src="assets/img/products/2.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                    <h5 class="card-title">RO With UV (WO Pre Treatment)</h5>
-                                    <p class="card-text"><b>Type:</b> Skid mounted with panel board<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 1000 LPH<br><br><b>Module:</b> 40 X 40<br></p>
-                                    <a href="#" class="btn btn-primary">Know More</a>
-                                  </div>
-                          </div>
-            </div>
-            <div class="col-md-4">
-                    <div class="card wow flipInY" style="width: 18rem;">
-                            <img src="assets/img/products/3.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                    <h5 class="card-title">RO  with UV with pre-treatment and auto backwash facility</h5>
-                                    <p class="card-text"><b>Type:</b> Skid mounted with panel Board<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 1000 LPH<br><br><b>Module:</b> 40 X 40 <br><br></p>
-                                    <a href="#" class="btn btn-primary">Know More</a>
-                                  </div>
-                          </div>
-             </div> -->
         </div>
-        <!-- <br>
-        <div class="row">
-                <div class="col-md-4">
-                        <div class="card wow flipInY" style="width: 18rem;">
-                                <img src="assets/img/products/4.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                        <h5 class="card-title">RO  Plant with panel board and skid made of SS 304</h5>
-                                        <p class="card-text"><b>Type:</b> Skid mounted with panel Board <br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 3000 LPH<br><br><b>Module:</b> 80 X 40<br><br></p>
-                                        <a href="#" class="btn btn-primary">Know More</a>
-                                      </div>
-                              </div>
-                </div>
-                <div class="col-md-4">
-                        <div class="card wow flipInY" style="width: 18rem;">
-                                <img src="assets/img/products/5.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                        <h5 class="card-title">RO  Plant with panel board and skid made of SS 304</h5>
-                                        <p class="card-text"><b>Type:</b> Skid mounted with panel
-                                            Board<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 5000 LPH<br><br><b>Module:</b> 60 X 60 <br><br></p>
-                                        <a href="#" class="btn btn-primary">Know More</a>
-                                      </div>
-                              </div>
-                </div>
-                <div class="col-md-4">
-                        <div class="card wow flipInY" style="width: 18rem;">
-                                <img src="assets/img/products/6.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                        <h5 class="card-title">RO  Plant with panel board and skid made of SS 304</h5>
-                                        <p class="card-text"><b>Type:</b>Skid mounted with panel<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 9000 LPH <br><br><b>Module:</b> 80 X 40<br><br></p>
-                                        <a href="#" class="btn btn-primary">Know More</a>
-                                      </div>
-                              </div>
-                 </div>
-    </div>
-    <br>
-    <div class="row">
-            <div class="col-md-4">
-                    <div class="card wow flipInY" style="width: 18rem;">
-                            <img src="assets/img/products/7.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                    <h5 class="card-title">Ultra Filter with UV</h5>
-                                    <p class="card-text"><b>Type:</b>Skid mounted with panel Board<br><br><b>Model:</b> Drinking Water<br><br><b>Capacity:</b> 100LPH<br><br><b>Module:</b> 40 X 20<br><br><b>UV:</b> 30 inch 38 watts MOC SS304 with quarts jacket balister and panel<br><br></p>
-                                    <a href="#" class="btn btn-primary">Know More</a>
-                                  </div>
-                          </div>
-            </div>
-            <div class="col-md-4">
-                    <div class="card wow flipInY" style="width: 18rem;">
-                            <img src="assets/img/products/8.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                    <h5 class="card-title">Ultra Filtration Plant</h5>
-                                    <p class="card-text"><b>Type:</b> Skid mounted with panel
-                                        Board<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 6000 LPH  <br><br><b>Module:</b> 60 X 60<br><br></p>
-                                    <a href="#" class="btn btn-primary">Know More</a>
-                                  </div>
-                          </div>
-            </div>
-            <div class="col-md-4">
-                    <div class="card wow flipInY" style="width: 18rem;">
-                            <img src="assets/img/products/9.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                    <h5 class="card-title">Ultra Filtration Plant</h5>
-                                    <p class="card-text"><b>Type:</b> Skid mounted with panel<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 25000 LPH<br><br><b>Module:</b> 80 X 40 <br><br></p>
-                                    <a href="#" class="btn btn-primary">Know More</a>
-                                  </div>
-                          </div>
-             </div>
-</div>
-<br>
-<div class="row">
-        <div class="col-md-4">
-                <div class="card wow flipInY" style="width: 18rem;">
-                        <img src="assets/img/products/10.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                                <h5 class="card-title">Nano Filtration Plant</h5>
-                                <p class="card-text"><b>Type:</b>Skid mounted with panel Board<br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 5000 LPH <br><br><b>Module: </b>60 X 40                                        <br><br></p>
-                                <a href="#" class="btn btn-primary">Know More</a>
-                              </div>
-                      </div>
-        </div>
-        <div class="col-md-4">
-                <div class="card wow flipInY" style="width: 18rem;">
-                        <img src="assets/img/products/11.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                                <h5 class="card-title">Nano Filtration Plant made of SS skid and housing</h5>
-                                <p class="card-text"><b>Type:</b> Skid mounted with panel Board <br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 25000 LPH<br><br><b>Module:</b> 60 X 40<br><br></p>
-                                <a href="#" class="btn btn-primary">Know More</a>
-                              </div>
-                      </div>
-        </div> -->
-        <!-- <div class="col-md-4">
-                <div class="card wow flipInY" style="width: 18rem;">
-                        <img src="assets/img/products/12.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                                <h5 class="card-title">Nano Filtration Plant made of SS skid and housing</h5>
-                                <p class="card-text"><b>Type:</b> Skid mounted with panel <br><br><b>Model:</b> Commercial<br><br><b>Capacity:</b> 500 LPH <br><br><b>Module:</b> 40 X 40<br><br></p>
-                                <a href="#" class="btn btn-primary">Know More</a>
-                              </div>
-                      </div>
-         </div>
-    </div> -->
+
         <br>
     </div>
 </div>
@@ -282,7 +162,111 @@
             <a href="https://adityav.in"> Molecules Enviro Care</a>
         </div>
         <!-- Copyright -->
-
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="content" >
+                            <div class="owl-carousel  project-image" id="some">
+                                <div id="one">
+                                    <!--              <img src="assets/img/about-infra.jpg" alt="">-->
+                                </div>
+                                <div id="two">
+                                    <!--              <img src="assets/img/about-infra.jpg" alt="">-->
+                                </div>
+                                <div id="three">
+                                    <!--              <img src="assets/img/about-infra.jpg" alt="">-->
+                                </div>
+                                <div id="four">
+                                    <!--              <img src="assets/img/about-infra.jpg" alt="">-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container" style="margin-top:30px;">
+                            <h3 id="project-header" style="color:black"></h3>
+                            <p id="project-content" style="color:black;font-size:15px;"></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
     <!-- Footer -->
 </section>
+<script>
+    let data = <%- JSON.stringify(projects)%>;
+    console.log(data)
+    function  openfile(id) {
+        $('#theImg1').remove();$('#theImg2').remove();$('#theImg3').remove();$('#theImg4').remove();
+        console.log("got something")
+        console.log(id);
+        let selected = data.filter((data)=>data._id == id);
+        console.log(selected)
+        if(selected.length>0){
+            $('#exampleModal').modal("show")
+            $('#project-header').text(selected[0].title);
+            $('#project-content').text(selected[0].content);
+            if(selected[0].image1){
+                // $('#some').append("<div id='one'></div>")
+                let byte = new Uint8Array(selected[0].image1.data)
+                $('#one').prepend($('<img>',{id:'theImg1',src:`data:image/png;base64,${encode(byte)}`}))
+            }
+            else{
+                $('#one').prepend($('<img>',{id:'theImg1',src:"assets/img/place.jpeg"}))
+            }
+            if(selected[0].image2){
+                // $('#two').append("<div id='one'></div>")
+                let byte = new Uint8Array(selected[0].image2.data)
+                $('#two').prepend($('<img>',{id:'theImg2',src:`data:image/png;base64,${ encode(byte)}`}))
+            }else{
+                $('#two').prepend($('<img>',{id:'theImg2',src:"assets/img/place.jpeg"}))
+            }
+            if(selected[0].image3){
+                // $('#three').append("<div id='one'></div>")
+                let byte = new Uint8Array(selected[0].image3.data)
+                $('#three').prepend($('<img>',{id:'theImg3',src:`data:image/png;base64,${encode(byte)}`}))
+            }else{
+                $('#three').prepend($('<img>',{id:'theImg3',src:"assets/img/place.jpeg"}))
+            }
+            if(selected[0].image4){
+                // $('#four').append("<div id='one'></div>")
+                let byte = new Uint8Array(selected[0].image4.data)
+                $('#four').prepend($('<img>',{id:'theImg4',src:`data:image/png;base64,${encode(byte)}`}))
+            }else{
+                $('#four').prepend($('<img>',{id:'theImg4',src:"assets/img/place.jpeg"}))
+            }
+        }
+
+    }
+    // public method for encoding an Uint8Array to base64
+    function encode (input) {
+        var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+        var output = "";
+        var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
+        var i = 0;
+
+        while (i < input.length) {
+            chr1 = input[i++];
+            chr2 = i < input.length ? input[i++] : Number.NaN; // Not sure if the index
+            chr3 = i < input.length ? input[i++] : Number.NaN; // checks are needed here
+
+            enc1 = chr1 >> 2;
+            enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+            enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+            enc4 = chr3 & 63;
+
+            if (isNaN(chr2)) {
+                enc3 = enc4 = 64;
+            } else if (isNaN(chr3)) {
+                enc4 = 64;
+            }
+            output += keyStr.charAt(enc1) + keyStr.charAt(enc2) +
+                keyStr.charAt(enc3) + keyStr.charAt(enc4);
+        }
+        return output;
+    }
+
+</script>
