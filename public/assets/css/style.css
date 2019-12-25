@@ -795,11 +795,11 @@ svg {
   background-image: url('../img/sc4.jpeg');
 }
 .slide:nth-child(1) .slide__overlay-path {
-  fill: #e99c7e;
+  fill: #00a2de;
 }
 @media (max-width: 991px) {
   .slide:nth-child(1) .slide__text {
-    background-color: rgba(233, 156, 126, 0.8);
+    background-color: rgba(233, 156, 126, 1);
   }
 }
 .slide:nth-child(2) {
@@ -810,11 +810,11 @@ svg {
   background-image: url('../img/sc2.jpeg');
 }
 .slide:nth-child(2) .slide__overlay-path {
-  fill: #e1ccae;
+  fill: #00a2de;
 }
 @media (max-width: 991px) {
   .slide:nth-child(2) .slide__text {
-    background-color: rgba(225, 204, 174, 0.8);
+    background-color: rgba(225, 204, 174, 1);
   }
 }
 .slide:nth-child(3) {
@@ -825,11 +825,11 @@ svg {
   background-image: url('../img/sc1.jpeg');
 }
 .slide:nth-child(3) .slide__overlay-path {
-  fill: #adc5cd;
+  fill: #00a2de;
 }
 @media (max-width: 991px) {
   .slide:nth-child(3) .slide__text {
-    background-color: rgba(173, 197, 205, 0.8);
+    background-color: rgba(173, 197, 205, 1);
   }
 }
 .slide:nth-child(4) {
@@ -840,11 +840,11 @@ svg {
   background-image: url('../img/sc5.jpeg');
 }
 .slide:nth-child(4) .slide__overlay-path {
-  fill: #cbc6c3;
+  fill: #00a2de;
 }
 @media (max-width: 991px) {
   .slide:nth-child(4) .slide__text {
-    background-color: rgba(203, 198, 195, 0.8);
+    background-color: rgba(203, 198, 195, 1);
   }
 }
 .slide__content {
@@ -871,13 +871,13 @@ svg {
   }
 }
 .slide__overlay path {
-  opacity: 0.8;
+  opacity: 1;
 }
 .slide__text {
   position: absolute;
   width: 25%;
-  bottom: 15%;
-  left: 12%;
+  bottom: 12%;
+  left: 3%;
   color: #fff;
   transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
   will-change: transform, opacity;
@@ -909,7 +909,7 @@ svg {
 }
 .slide__text-desc {
   font-family:  "Raleway", sans-serif;
-  font-size: 1rem;
+  font-size: 0.7rem;
   margin-bottom: 1.5rem;
   line-height:22px;
 }
@@ -1005,3 +1005,4 @@ svg {
   display: none;
   text-align: center;
 }
+/*Scrol*/
