@@ -86,6 +86,9 @@ div.card:hover {
 section {
   height: 100vh;
 }
+#mission{
+  height:120vh
+}
 #about {
   padding: 200px 0px 20px 0px;
   background-image: linear-gradient(
@@ -340,7 +343,7 @@ div.card {
     display:block;
   }
   #mission{
-    height:210vh;
+    height:250vh;
   }
   #footer{
     height:120vh;
@@ -1006,3 +1009,29 @@ svg {
   text-align: center;
 }
 /*Scrol*/
+.ribbon {
+  background-color: #00a2de;
+  fill: #a8ccfb;
+  position: relative;
+  line-height: 40px;
+  padding: 0 20px;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  font-weight: 100;
+  margin-bottom: 10px;
+  font-size:13px;
+}
+
+.fold {
+  position: absolute;
+  border-style: solid;
+}
+.fold.top {
+  top: 0;
+}
+.fold.top.left {
+  left: 0;
+  border-width: 12px 12px 0 0;
+  border-color: #bdd8fc #085469 #a8ccfb #a8ccfb;
+}
+
