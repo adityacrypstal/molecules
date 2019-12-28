@@ -12,18 +12,22 @@ const ProjectSchema = new mongoose.Schema({
   image1: {
     type: Buffer,
 
-  },
-  image2: {
-    type: Buffer,
+  // },
+  // image2: {
+  //   type: Buffer,
+  //
+  // },
+  // image3: {
+  //   type: Buffer,
+  //
+  // },
+  // image4: {
+  //   type: Buffer,
 
   },
-  image3: {
-    type: Buffer,
-
-  },
-  image4: {
-    type: Buffer,
-
+  type: {
+    type:String,
+    required:true
   }
 });
 

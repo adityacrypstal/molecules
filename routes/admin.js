@@ -111,18 +111,18 @@ router.post('/register', (req, res) => {
 //Product
 router.post('/addProduct',upload.single('image1'),async(req, res)=>{
   let errors = [];
-    const{title, type, capacity, tank} = req.body;
+    const{title, type, feature} = req.body;
     console.log(req.file)
     const image1 = await sharp(req.file.buffer).resize(200).png().toBuffer();
     console.log(image1)
-    if(!title || !type || !capacity || !tank || !image1){
+    if(!title || !type || !feature || !image1){
       errors.push({ msg: 'Please Fill All Data' });
       Product.find({}).then((data)=>{
         res.render('dash',{product:data,errors});
       })
       
     }else{
-      new Product({title, type, capacity, tank, image1}).save().then((data)=>{
+      new Product({title, type, feature, image1}).save().then((data)=>{
         req.flash(
           'success_msg',
           'Data Inserted!'
@@ -142,20 +142,20 @@ router.get('/deleteProduct/:id',(req, res)=>{
 var cpUpload =upload.fields([{ name: 'image1', maxCount: 1 }, { name: 'image2', maxCount: 1 }, { name: 'image3', maxCount: 1 }, { name: 'image4', maxCount: 1 }])
 router.post('/addProject', cpUpload, async(req, res)=>{
   let errors = [];
-    const{title, content} = req.body;
+    const{title, content, type} = req.body;
     console.log(req.files)
     const image1 = req.files['image1'] ? await sharp(req.files['image1'][0].buffer).resize(200).png().toBuffer()  : null;
-    const image2 = req.files['image2'] ? await sharp(req.files['image2'][0].buffer).resize(200).png().toBuffer()  : null;
-    const image3 = req.files['image3'] ? await sharp(req.files['image3'][0].buffer).resize(200).png().toBuffer() : null;
-    const image4 = req.files['image4'] ? await sharp(req.files['image4'][0].buffer).resize(200).png().toBuffer() : null;
-    if(!title || !content || !image1){
+    // const image2 = req.files['image2'] ? await sharp(req.files['image2'][0].buffer).resize(200).png().toBuffer()  : null;
+    // const image3 = req.files['image3'] ? await sharp(req.files['image3'][0].buffer).resize(200).png().toBuffer() : null;
+    // const image4 = req.files['image4'] ? await sharp(req.files['image4'][0].buffer).resize(200).png().toBuffer() : null;
+    if(!title || !content || !image1 || !type){
       errors.push({ msg: 'Please Fill All Data' });
       Project.find({}).then((data)=>{
         res.render('project_admin',{project:data,errors});
       })
       
     }else{
-      new Project({title,content, image1, image2, image3, image4}).save().then((data)=>{
+      new Project({title,content, image1, type}).save().then((data)=>{
         req.flash(
           'success_msg',
           'Data Inserted!'

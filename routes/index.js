@@ -20,20 +20,17 @@ let errors = [];
 // Welcome Page
 router.get("/", (req, res) => {
   Project.find({}).limit(4).sort('-created').then(data => {
-    console.log(data);
     res.render("index", { projects: data, errors: errors });
   });
 });
 router.get("/about", (req, res) => res.render("about"));
 router.get("/products", (req, res) => {
   Product.find({}).then(data => {
-    console.log(data);
     res.render("products", { products: data });
   });
 });
 router.get("/project", (req, res) => {
   Project.find({}).then(data => {
-    console.log(data);
     res.render("projects", { projects: data, errors: errors });
   });
 });

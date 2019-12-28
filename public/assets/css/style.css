@@ -1010,13 +1010,13 @@ svg {
 }
 /*Scrol*/
 .ribbon {
-  background-color: #00a2de;
+  background-color: #c9dffd;
   fill: #a8ccfb;
   position: relative;
   line-height: 40px;
   padding: 0 20px;
   font-family: "Raleway", sans-serif;
-  color: #fff;
+  color: #5a697c;
   font-weight: 100;
   margin-bottom: 10px;
   font-size:13px;
@@ -1034,4 +1034,9 @@ svg {
   border-width: 12px 12px 0 0;
   border-color: #bdd8fc #085469 #a8ccfb #a8ccfb;
 }
-
+.tab-content>.active {
+  display: flex !important;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  background-color: #367cdc !important;
+}

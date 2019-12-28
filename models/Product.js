@@ -9,14 +9,14 @@ const ProductSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  capacity: {
+  feature: {
     type: String,
     required: true
   },
-  tank: {
-    type: String,
-    require:true
-  },
+  // tank: {
+  //   type: String,
+  //   require:true
+  // },
   image1: {
     type: Buffer,
 
