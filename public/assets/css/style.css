@@ -897,6 +897,7 @@ svg {
     transform: translateY(50%);
     transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
     padding: 0 1rem;
+    display: none;
   }
 }
 .slide__text-heading {
