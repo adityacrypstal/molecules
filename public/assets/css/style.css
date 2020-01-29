@@ -84,7 +84,7 @@ div.card:hover {
   background-repeat: no-repeat;
 }
 section {
-  height: 100vh;
+  height: 90vh;
 }
 #mission{
   height:120vh
@@ -1040,4 +1040,11 @@ svg {
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
   background-color: #367cdc !important;
+}
+.about-what{
+  opacity:0.8;
+  font-size:12px!important;
+}
+.about-what img {
+  margin-top:5px;
 }
