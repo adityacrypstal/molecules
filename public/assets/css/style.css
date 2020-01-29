@@ -78,7 +78,7 @@ div.card:hover {
   margin-top:-50px;
   width: 100%;
   height: 100vh;
-  background-image: url("../img/bg3.png");
+  background-image: url("../img/b3.png");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -214,12 +214,11 @@ nav li{
 }
 #header{
   height:50vh;
-  background-image: url("../img/parallel.jpeg");
-  background-size: cover;
+  background-image: url("../img/b3.JPG");
+  background-size: 1000px 600px;
   background-attachment: fixed;
-  background-position: fixed;
+  background-position: center top;
   background-repeat: no-repeat;
-  filter: blur(2px);
 }
 #about-us{
 
@@ -795,7 +794,7 @@ svg {
 }
 .slide:nth-child(1) .slide__bg {
   left: 0;
-  background-image: url('../img/sc4.jpeg');
+  background-image: url('../img/b1.jpg');
 }
 .slide:nth-child(1) .slide__overlay-path {
   fill: #00a2de;
@@ -810,7 +809,7 @@ svg {
 }
 .slide:nth-child(2) .slide__bg {
   left: -50%;
-  background-image: url('../img/sc2.jpeg');
+  background-image: url('../img/b2.jpg');
 }
 .slide:nth-child(2) .slide__overlay-path {
   fill: #00a2de;
@@ -825,7 +824,7 @@ svg {
 }
 .slide:nth-child(3) .slide__bg {
   left: -100%;
-  background-image: url('../img/sc1.jpeg');
+  background-image: url('../img/b3.JPG');
 }
 .slide:nth-child(3) .slide__overlay-path {
   fill: #00a2de;
@@ -840,7 +839,7 @@ svg {
 }
 .slide:nth-child(4) .slide__bg {
   left: -150%;
-  background-image: url('../img/sc5.jpeg');
+  background-image: url('../img/b4.jpg');
 }
 .slide:nth-child(4) .slide__overlay-path {
   fill: #00a2de;
