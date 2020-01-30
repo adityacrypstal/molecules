@@ -24,6 +24,8 @@ router.get("/", (req, res) => {
   });
 });
 router.get("/about", (req, res) => res.render("about"));
+router.get("/water", (req, res) => res.render("water"));
+
 router.get("/products", (req, res) => {
   Product.find({}).then(data => {
     res.render("products", { products: data });

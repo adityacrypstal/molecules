@@ -1047,3 +1047,8 @@ svg {
 .about-what img {
   margin-top:5px;
 }
+#water p{
+  font-size:15px;
+  text-align:justify;
+  line-height: 25px;
+}
