@@ -214,8 +214,8 @@ nav li{
 }
 #header{
   height:50vh;
-  background-image: url("../img/b3.JPG");
-  background-size: 1000px 600px;
+  background-image: url("../img/back.JPG");
+  background-size: 1500px 400px;
   background-attachment: fixed;
   background-position: center top;
   background-repeat: no-repeat;
