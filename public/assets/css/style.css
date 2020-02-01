@@ -84,7 +84,7 @@ div.card:hover {
   background-repeat: no-repeat;
 }
 section {
-  height: 90vh;
+  height: 100vh;
 }
 #mission{
   height:120vh
@@ -1051,4 +1051,10 @@ svg {
   font-size:15px;
   text-align:justify;
   line-height: 25px;
+}
+#water h5{
+  text-align:left
+}
+#water h4{
+  border-bottom:1px solid grey
 }
