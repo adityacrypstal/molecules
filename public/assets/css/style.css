@@ -316,6 +316,11 @@ div.card {
 }
 .navbar{
   background-color:#008cd3;!important;}
+@media screen and (min-width: 1600px) {
+ #mission{
+   height:190vh !important;
+ }
+}
 @media only screen and (max-width: 600px) {
   .card-img-top{
     height:auto;
