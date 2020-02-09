@@ -87,10 +87,10 @@ section {
   height: 100vh;
 }
 #mission{
-  height:120vh
+  height:140vh
 }
 #about {
-  padding: 200px 0px 20px 0px;
+  padding: 111px 0px 40px 0px;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.8),
       rgba(255, 255, 255, 0.8)
@@ -100,6 +100,7 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height:75vh;
 }
 #about h1 {
   font-weight: bolder;
@@ -125,7 +126,7 @@ section {
   text-align: justify;
 }
 #mission {
-  padding: 100px 0px 20px 0px;
+  padding: 85px 0px 20px 0px;
   background: #e0eafc; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
@@ -161,7 +162,7 @@ section {
 }
 .fancy2 li{
   line-height:25px;
-  font-size:16px !important;
+  font-size:17px !important;
 }
 .read-more {
   margin-top: 10px;
@@ -220,6 +221,14 @@ nav li{
   background-position: center top;
   background-repeat: no-repeat;
 }
+#header2{
+  height:50vh;
+  background-image: url("../img/back3.jpg");
+  background-size: 1400px 500px;
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
 #about-us{
 
 }
@@ -258,7 +267,6 @@ nav li{
 }
 .about-infra{
   margin-left:40px;
-  opacity:0.8;
 }
 .with-bg{
   background-color:rgba(27, 113, 226, 0.671) !important;
@@ -322,6 +330,15 @@ div.card {
  }
 }
 @media only screen and (max-width: 600px) {
+  #about{
+    height:130vh;
+  }
+  #but {
+    height: 20vh !important;
+  }
+  #but a{
+    padding-bottom:2px;
+  }
   .card-img-top{
     height:auto;
     width:100%!important;
@@ -347,7 +364,7 @@ div.card {
     display:block;
   }
   #mission{
-    height:310vh;
+    height:340vh;
   }
   #footer{
     height:120vh;
@@ -829,7 +846,7 @@ svg {
 }
 .slide:nth-child(3) .slide__bg {
   left: -100%;
-  background-image: url('../img/b3.JPG');
+  background-image: url('../img/b3.jpg');
 }
 .slide:nth-child(3) .slide__overlay-path {
   fill: #00a2de;
@@ -1024,7 +1041,7 @@ svg {
   color: #5a697c;
   font-weight: 100;
   margin-bottom: 10px;
-  font-size:13px;
+  font-size:17px;
 }
 
 .fold {
@@ -1062,4 +1079,14 @@ svg {
 }
 #water h4{
   border-bottom:1px solid grey
+}
+#but{
+  height: 8vh ;
+  background-color: #028cd2;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 20px;
+  text-decoration: underline;
 }

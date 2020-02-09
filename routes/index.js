@@ -25,6 +25,9 @@ router.get("/", (req, res) => {
 });
 router.get("/about", (req, res) => res.render("about"));
 router.get("/water", (req, res) => res.render("water"));
+router.get("/stp", (req, res) => res.render("wasteWater"));
+router.get("/wtp", (req, res) => res.render("waterTreatment"));
+router.get("/standards", (req, res) => res.render("standards"));
 
 router.get("/products", (req, res) => {
   Product.find({}).then(data => {
