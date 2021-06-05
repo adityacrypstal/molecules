@@ -244,13 +244,13 @@
         <div>
             <div class="card wow flipInY test" style="width: 18rem;">
                 <img class="card-img-top " src="data:image/png;base64,<%= project.image1.toString('base64') %>"
-                     alt="Card image cap" style="height:320px;"/>
+                     alt="Card image cap" style="max-height:100px;"/>
                 <div class="card-body">
-                    <h5 class="card-title"><%= project.title %></h5>
+                      <div style="height: 60px"> <h5 class="card-title"><%= project.title %></h5></div>
                     <p class="card-text dots"><%= project.content.substring(0, 100) %>
                     </p>
                     <p class="btn btn-primary" onclick='openfile("<%= project._id %>")'>Know More</p>
-                </div>
+                   </div>
             </div>
         </div>
         <% }); %>

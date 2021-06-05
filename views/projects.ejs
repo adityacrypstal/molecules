@@ -51,14 +51,14 @@
         </div>
         <br>
         <div class="tab-content " id="pills-tabContent" >
-                    <div class="tab-pane fade show active row" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"  >
+                    <div class="tab-pane fade show active row " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"   >
                         <%projects.forEach((product)=>{%>
                         <%if(product.type == 'sewage'){%>
                         <div class="" style="margin-bottom:20px;flex: 1;" >
                             <div class="card wow flipInY test " style="width: 18rem;">
                                 <img src='data:image/png;base64,<%=product.image1.toString('base64')%>' class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title"><%=product.title%></h5>
+                                   <div style="height:60px"> <h5 class="card-title"><%=product.title%></h5></div>
                                     <p class="card-text dots"><%=product.content.substring(0, 100)%>
                                         <br><br>
                                         <a href="#" class="btn btn-primary" onclick='openfile("<%=product._id%>")'>Know More</a>
@@ -76,7 +76,7 @@
                             <div class="card wow flipInY test " style="width: 18rem;">
                                 <img src='data:image/png;base64,<%=product.image1.toString('base64')%>' class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title"><%=product.title%></h5>
+                                    <div style="height: 60px"> <h5 class="card-title"><%=product.title%></h5></div>
                                     <p class="card-text dots"><%=product.content.substring(0, 100)%>
                                         <br><br>
                                         <a href="#" class="btn btn-primary" onclick='openfile("<%=product._id%>")'>Know More</a>

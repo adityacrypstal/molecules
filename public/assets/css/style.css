@@ -87,7 +87,7 @@ section {
   height: 100vh;
 }
 #mission{
-  height:140vh
+  min-height:1000px;
 }
 #about {
   padding: 111px 0px 40px 0px;
@@ -100,7 +100,7 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height:75vh;
+  min-height:550px;
 }
 #about h1 {
   font-weight: bolder;
@@ -177,10 +177,10 @@ section {
   rgb(168, 204, 251)
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top,  rgb(168, 204, 251),  rgb(168, 204, 251));
-  height: 60vh;
+  height:500px;
 }
 #scroll .owl-carousel div {
-  height: 350px;
+  height: 300px;
 }
 .test {
   background-color: rgb(240, 243, 248);
@@ -240,15 +240,15 @@ nav li{
 #about-us h1::first-letter{
   font-size:60px;
   color:rgb(53, 125, 219);
-} 
+}
 #about-us h3::first-letter{
   font-size:40px;
   color:rgb(53, 125, 219);
-} 
+}
 #products h2::first-letter{
   font-size:40px;
   color:rgb(53, 125, 219);
-} 
+}
 #products h2{
   margin-top:40px;
   border-bottom:5px solid rgba(128, 128, 128, 0.404);
@@ -364,7 +364,7 @@ div.card {
     display:block;
   }
   #mission{
-    height:340vh;
+    height:280vh;
   }
   #footer{
     height:120vh;
@@ -386,7 +386,7 @@ div.card {
   }
   .contact-form input{
     margin-left:0px;
-  } 
+  }
   .contact-form textarea{
     margin-left:0px;
   }
@@ -1089,4 +1089,27 @@ svg {
   font-weight: bolder;
   padding: 20px;
   text-decoration: underline;
+}
+.bg-item{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.owl-item{
+  padding-bottom:20px;
+}
+.owl-carousel{
+  min-height:350px;
+}
+.owl-stage-outer{
+  min-height:350px;
+}
+.card-body{
+  display: flex ;
+  flex-direction: column;
+  justify-content: space-evenly
+}
+.tab-pane{
+  display: flex;
+  flex-wrap: wrap;
 }
